@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+body {
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+
+
+/* Preloader */
+
+/* Scroll-Bar */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#A760FF, #3430FF);
+  border-radius: 6px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
+}
+
+/* Navbar */
+
+li {
+  transition: 0.5s;
+  /* margin: 0px 20px; */
+  font-size: 20px;
+
+}
+
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+  padding: 20px 30px;
+}
+
+
+
+li.nav-item .active {
+  background-image: linear-gradient(#A760FF, #3430FF);
+  border-radius: 10px;
+} 
+
+
+/* Logo */
+
+.logo {
+  height: 50px;
+  padding-right: 5px;
+}
+
+/* Landing Page */
+
+.bg-landingPage {
+  background-image: url("../img/Hero.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+}
+
+
+.bg-landingPage_img {
+  height: 670px;
+  width: 100%;
+}
+
+.landing-page {
+  transition: transform 1.1s ease-in-out;
+  width: 100%
+}
+
+#more {
+  display: none;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-size: 2.7rem;
+  font-weight: 900;
+}
+
+.building-image {
+  height: 600px;
+}
+
+.keyword {
+  color: #4F3BFF;
+  font-weight: 900;
+}
+
+
+.btn-grad {
+  background-image: linear-gradient(#A760FF, #3430FF);
+  padding: 20px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.background-img {
+  background-image: url("../img/register-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+}
+
+.register-img {
+  height: 50vh;
+}
+
+
+/* About */
+
+p.about-text {
+  font-size: 20px;
+  padding: 10px 0px;
+}
+
+/* Three Words */
+
+.bg-threeWord {
+  background-color: #1F2E35;
+}
+
+/* Tree Steps */
+
+.threesteps {
+  background-image: url("../img/Frame.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* Start of Three Steps */
+
+
+
+/* Step 01 */
+
+.btn-earn {
+  padding: 15px 25px;
+  background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  border: none;
+}
+
+.btn-earn:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Step 02 */
+
+
+.btn-invest {
+  background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
+  padding: 15px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  border: none;
+}
+
+.btn-invest:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Step 03 */
+
+
+.btn-return {
+  padding: 15px 25px;
+  background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  border: none;
+}
+
+.btn-return:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.steps {
+  position: absolute;
+  top: -108px;
+  left: -20px;
+}
+
+
+
+/* Pricing */
+
+.bg-pricing {
+  background-image: url("../img/bg-pricing.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+}
+
+.pricingContainer {
+  background-color: white;
+  border-radius: 26px;
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 26px;
+  transition: transform 450ms;
+  transform-origin: center;
+  padding: 20px;
+  height: 420px;
+  width: 292px;
+}
+
+.price-card .active {
+  background: linear-gradient(#A760FF, #3430FF);
+}
+
+ .price-card:hover {
+  background: linear-gradient(#A760FF, #3430FF);
+  transform: scale(1.08);
+  color: white;
+}
+
+.icon-check {
+  padding-right: 5px;
+}
+
+
+
+
+
+.btn-price {
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  border-radius: 24px;
+  display: block;
+  border: none;
+}
+
+.btn-price:hover {
+  background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.content {
+  height: 200px;
+  width: 269px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%), 0px 4px 4px rgb(0 0 0 / 25%), 0px 4px 4px rgb(0 0 0 / 25%);
+  border: white 3px solid;
+  border-radius: 20px;
+  border-color: linear-gradient(143.8deg, #A760FF 5.59%, #3430FF 77.97%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-1 {
+  border: 3px solid #A760FF;
+}
+
+.content-2 {
+  border: 3px solid #FFF264;
+}
+
+.content-3 {
+  border: 3px solid #D800B9;
+}
+
+.bg-question {
+  min-height: 70vh;
+  background: linear-gradient(143.8deg, #A760FF 5.59%, #3430FF 77.97%);
+}
+
+
+
+
+
+/* Carousel */
+
+
+
+.testimonials {
+  background: radial-gradient(86.6% 86.6% at 43.86% 0%, #FF5555 0%, #D800B9 100%);
+  border-radius: 25px;
+  min-height: 70vh;
+  padding-top: 7rem;
+}
+
+.star {
+  color: #FFA033;
+}
+
+.image-text {
+  text-align: center;
+  color: #000000;
+  border-radius: 20px;
+}
+
+.image-text h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+}
+
+.image-text p {
+  font-size: 14px;
+}
+
+.single-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  width: 280px;
+  height: 306px;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.image-area {
+  width: 100px;
+  height: 100px;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+}
+
+.image-area img {
+  width: 100%;
+}
+
+.carousel-indicators {
+  left: 0;
+  top: auto;
+  bottom: -70px;
+}
+
+.carousel-indicators button {
+  background: #000; 
+  width: 15px;
+  height: 15px;
+}
+
+.carousel-indicators :active {
+  background: #fff;
+}
+
+
+/* RESPONSIVITY */
+
+
+
+/* Desktop */
+
+/* @media screen and (min-width: 900px) {
+
+
+}
+ */
+
+
+
+/* Tablette */
+
+@media screen and (max-width: 768px) {
+
+  .heading {
+      font-size: 1.4rem;
+      padding-top: 4rem;
+  }
+
+  .building-image {
+    transform: translate(0% ,10%);
+    height: 300px;
+    width: 300px;
+  }
+
+  .bg-landingPage_img {
+    height: 270px;
+    padding-top: 30px;
+  }
+
+  .btn-earn {
+    display: block;
+    margin: 0 auto;
+  }
+
+
+  .bg-landingPage {
+    min-height: 58vh;
+  }
+
+.bg-threeWord {
+  margin-bottom: 40px;
+}
+
+  .step-img {
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+    height: 300px;
+  }
+
+  .testimonials {
+    min-height: 100vh;
+    padding-top: 0;
+  }
+}
+
