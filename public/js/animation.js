@@ -11,22 +11,23 @@ var scrollSpy = new bootstrap.ScrollSpy(document.body, {
 })
 
 
-// Readmore / Read Less Animation
 
-function readMore() {
-    let dots = document.getElementById("dots");
-    let moreText = document.getElementById("more");
-    let btnText = document.querySelector(".btn-earn");
-  
-    if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Read more"; 
-      moreText.style.display = "none";
-      
-      
+
+
+// Project Animation
+
+$(document).ready(function () {
+  $('.liste').click(function () {
+    const value = $(this).attr('data-filter'); 
+    if (value == 'all') {
+      $('.itemBox').show('1000'); 
     } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Read less"; 
-      moreText.style.display = "inline";
+      $('.itemBox').not('.'+value).hide('1000'); 
+      $('.itemBox').filter('.'+value).show('1000'); 
     }
-  }
+  })
+  // Class active
+  $('.liste').click(function () {
+    $(this).addClass('active').siblings().removeClass('active'); 
+  })
+})
