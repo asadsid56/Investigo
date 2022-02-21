@@ -8,6 +8,10 @@ const userSchema = new mongoose.Schema({
         type:String
     },
 
+    nationalNumber : {
+        type:Number
+    },
+
     lastName : {
         type:String,
         required:true

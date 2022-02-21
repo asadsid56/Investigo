@@ -43,6 +43,13 @@
                             {{!-- User ID --}}
                             <input type="text" name="userID" class="d-none">
 
+                            {{!-- N° de registre National --}}
+
+                            <div class="col-12 mb-3">
+                            <label for="nationalNumber" class="form-label">N° de Registre National<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="nationalNumber" required>
+                        </div>
+
                             {{!-- Last Name --}}
                             <div class="mb-3 col-md-6 col-sm-12">
                                 <label>Nom<span class="text-danger">*</span></label>
@@ -61,7 +68,7 @@
                             {{!-- Phone Number --}}
                             <div class="mb-3 col-md-6 col-sm-12">
                                 <label>N° de téléphone<span class="text-danger">*</span></label>
-                                <input type="text" name="phoneNumber" class="form-control" required>
+                                <input type="number" name="phoneNumber" class="form-control" required>
                             </div>
 
                             {{!-- Gender --}}
@@ -78,7 +85,7 @@
                             {{!-- Age --}}
                             <div class="mb-3 col-md-6 col-sm-12">
                                 <label>Age<span class="text-danger">*</span></label>
-                                <input type="text" name="age" class="form-control" required>
+                                <input type="number" name="age" class="form-control" required>
                             </div>
 
                             {{!-- Address --}}
@@ -94,7 +101,7 @@
                         
                         <div class="col-md-4">
                             <label for="inputZip" class="form-label">Code postal<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" name="CodePostal" required>
+                            <input type="number" class="form-control" name="CodePostal" required>
                         </div>
                       
 

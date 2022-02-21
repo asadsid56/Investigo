@@ -103,6 +103,7 @@ app.post("/register", async (req,res) => {
        <h4 class="mb-3">Veuillez trouver ci-joint vos coordonnées ainsi que votre numéro de client :</h4>
        <ul>
            <li><b>N° de client : ${uuid}</b></li>
+           <li><b>N° de registre national : ${req.body.nationalNumber}</b></li>
            <li>Prénom : ${req.body.firstName} </li>
            <li>Nom : ${req.body.lastName} </li>
            <li>N° de téléphone : ${req.body.phoneNumber} </li>
@@ -130,15 +131,16 @@ app.post("/register", async (req,res) => {
        Rue aux laines 68-72 <br>
        Bruxelles, 1000</span>
 </div>`;
-
+        let USER_M = process.env.USER_M;
+        let USER_P = process.env.USER_P;
         let transporter = nodemailer.createTransport({
             host: "smtp-mail.outlook.com",
             secureConnection: false,
             port: 587,
             secure: false, // true for 465, false for other ports
             auth: {
-                user: "info@investigo.live", // generated ethereal user
-                pass: "investigo@123"     // generated ethereal password
+                user: USER_M, // generated ethereal user
+                pass: USER_P     // generated ethereal password
             }, 
             tls: {
                 rejectUnauthorized: false
