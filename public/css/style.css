@@ -6,6 +6,13 @@ body {
   position: relative;
 }
 
+.nav-link {
+  color: #ffffff;
+}
+
+.nav-link:hover {
+  color: #EDDE5D;
+}
 
 
 /* Preloader */
@@ -17,28 +24,36 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(#A760FF, #3430FF);
-  border-radius: 6px;
+  background-image: linear-gradient(#8627fb, #3430FF);
+  border-radius: 5px;
 
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
-}
+/* ::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(#EDDE5D, #A760FF, #DD2476);
+} */
 
 /* Navbar */
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
 
 li {
   transition: 0.5s;
   /* margin: 0px 20px; */
   font-size: 20px;
+  list-style: none;
 
 }
 
-
+.bg-dark {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 .navbar-dark .navbar-nav .nav-link {
   color: #ffffff;
-  padding: 20px 30px;
+  padding: 14px 25px;
 }
 
 
@@ -63,19 +78,15 @@ li.nav-item .active {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 90vh;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
-.bg-landingPage_img {
-  height: 670px;
-  width: 100%;
-}
 
-.landing-page {
-  transition: transform 1.1s ease-in-out;
-  width: 100%
-}
+
 
 #more {
   display: none;
@@ -87,9 +98,6 @@ li.nav-item .active {
   font-weight: 900;
 }
 
-.building-image {
-  height: 600px;
-}
 
 .keyword {
   color: #4F3BFF;
@@ -99,7 +107,7 @@ li.nav-item .active {
 
 .btn-grad {
   background-image: linear-gradient(#A760FF, #3430FF);
-  padding: 20px 25px;
+  padding: 14px 25px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -109,7 +117,6 @@ li.nav-item .active {
   outline: none;
   border: none;
   text-decoration: none;
-  font-size: 20px;
   font-weight: 900;
 }
 
@@ -134,6 +141,13 @@ li.nav-item .active {
 
 
 /* About */
+
+.bg-about {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 p.about-text {
   font-size: 20px;
@@ -162,7 +176,11 @@ p.about-text {
 
 /* Step 01 */
 
-.btn-earn {
+a {
+  text-decoration: none;
+}
+
+.btn-red {
   padding: 15px 25px;
   background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
   text-align: center;
@@ -172,11 +190,12 @@ p.about-text {
   color: white;
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
-  display: block;
   border: none;
+  text-decoration: none;
+  display: block;
 }
 
-.btn-earn:hover {
+.btn-red:hover {
   background-position: right center;
   /* change the direction of the change here */
   color: #fff;
@@ -186,7 +205,7 @@ p.about-text {
 /* Step 02 */
 
 
-.btn-invest {
+.btn-yellow {
   background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
   padding: 15px 25px;
   text-align: center;
@@ -194,13 +213,13 @@ p.about-text {
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #eee;
   border-radius: 10px;
-  display: block;
   border: none;
+  text-decoration: none;
+  display: block;
 }
 
-.btn-invest:hover {
+.btn-yellow:hover {
   background-position: right center;
   /* change the direction of the change here */
   color: #fff;
@@ -210,7 +229,7 @@ p.about-text {
 /* Step 03 */
 
 
-.btn-return {
+.btn-purple {
   padding: 15px 25px;
   background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
   text-align: center;
@@ -222,9 +241,10 @@ p.about-text {
   border-radius: 10px;
   display: block;
   border: none;
+  text-decoration: none;
 }
 
-.btn-return:hover {
+.btn-purple:hover {
   background-position: right center;
   /* change the direction of the change here */
   color: #fff;
@@ -243,32 +263,31 @@ p.about-text {
 /* Pricing */
 
 .bg-pricing {
-  background-image: url("../img/bg-pricing.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fdfdfd;
+    padding-bottom: 25px;
 }
 
-.pricingContainer {
-  background-color: white;
+.shad {
+  box-shadow: -2px -2px 34px rgb(177 177 179 / 30%);
   border-radius: 26px;
 }
+
+
 
 .price-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   border-radius: 26px;
   transition: transform 450ms;
-  transform-origin: center;
-  padding: 20px;
-  height: 420px;
-  width: 292px;
+  padding: 25px;
+  width: 280px;
+  height: 450px;
 }
 
-.price-card .active {
-  background: linear-gradient(#A760FF, #3430FF);
-}
+
 
  .price-card:hover {
   background: linear-gradient(#A760FF, #3430FF);
@@ -276,16 +295,16 @@ p.about-text {
   color: white;
 }
 
+.pack1 , .pack2 {
+  margin-top: 73px;
+}
+
 .icon-check {
   padding-right: 5px;
 }
 
-
-
-
-
 .btn-price {
-  padding: 15px 45px;
+  padding: 10px 90px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -328,87 +347,206 @@ p.about-text {
 .content-3 {
   border: 3px solid #D800B9;
 }
-
-.bg-question {
-  min-height: 70vh;
-  background: linear-gradient(143.8deg, #A760FF 5.59%, #3430FF 77.97%);
+.content-4 {
+  border: 3px solid #eee;
 }
 
 
 
+/* Chiffres */
 
-
-/* Carousel */
-
-
-
-.testimonials {
-  background: radial-gradient(86.6% 86.6% at 43.86% 0%, #FF5555 0%, #D800B9 100%);
-  border-radius: 25px;
-  min-height: 70vh;
-  padding-top: 7rem;
+.bg-chiffres{
+  background-image: url("../img/bg-chiffres.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: center;
+  height: auto;
 }
 
-.star {
-  color: #FFA033;
+.counter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+/* Projects */
+
+.bg-projects {
+  min-height: 100vh;
+}
+.container ul .list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
-.image-text {
-  text-align: center;
-  color: #000000;
-  border-radius: 20px;
+.container ul .liste {
+  display: inline-block;
+  background-color: #eee;
+  padding: 8px 20px;
+  margin: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
 }
 
-.image-text h2 {
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-
+.container ul .liste.active {
+  color: white;
+  background-image: linear-gradient(#A760FF, #3430FF);
 }
 
-.image-text p {
-  font-size: 14px;
+.product {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 100px;
 }
 
-.single-box {
+.product .itemBox {
+  width: 300px;
+  height: auto;
+  margin: 0 15px;
+}
+
+.itemBox .card img {
+  height: 225px;
+}
+
+.btn-projects {
+
+    background-image: linear-gradient(#A760FF, #3430FF);
+    padding: 8px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+} 
+
+.card:hover{
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  transition: all .5s;
+}
+
+
+/* Modal */
+
+
+
+/* Collaborateur */
+
+.collaborateur {
+  background-image: url("../img/bg-collaborateur.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
-  width: 280px;
-  height: 306px;
-  border-radius: 20px;
-  padding: 10px;
-  margin: 10px;
+  min-height: 90vh;
 }
 
-.image-area {
-  width: 100px;
-  height: 100px;
-  border: 5px solid #ffffff;
+.collab {
+  border-radius: 30px;
+  background: #ffffff;
+}
+
+
+
+/* Message */
+
+.bg-question {
+  background-image: url("../img/register-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.signup-form {
+  display: flex;
+  justify-content: center;
+}
+
+.msgForm {
+  border-radius: 20px;
+  color: black;
+  max-width: 600px;
+}
+
+.backToHomePage {
+  background-image: linear-gradient(#A760FF, #3430FF);
+  padding: 20px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.bg-footer {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.social-media {
+  cursor: pointer;
+}
+
+.facebook {
+  background: linear-gradient(143.8deg, #A760FF 5.59%, #3430FF 77.97%);
   border-radius: 50%;
 }
 
-.image-area img {
-  width: 100%;
+.instagram {
+  background: radial-gradient(86.6% 86.6% at 43.86% 0%, #FF5555 0%, #D800B9 100%);
+  border-radius: 50%;
 }
 
-.carousel-indicators {
-  left: 0;
-  top: auto;
-  bottom: -70px;
+.snapchat {
+  background: linear-gradient(180deg, #FFF264 0%, #FFB334 100%);
+  border-radius: 50%;
 }
 
-.carousel-indicators button {
-  background: #000; 
-  width: 15px;
-  height: 15px;
+
+
+/* Emploi  */
+
+.bg-condition ,.bg-emploi {
+  min-height: 100vh;
+  padding-top: 100px;
 }
 
-.carousel-indicators :active {
-  background: #fff;
+.condition-heading , .emploi-heading{
+  padding: 30px 0px;
+  text-align: center;
+  color: #000;
 }
+
+.list li {
+  font-size: 0.9rem;
+  list-style: disc;
+}
+
+
 
 
 /* RESPONSIVITY */
@@ -429,30 +567,33 @@ p.about-text {
 
 @media screen and (max-width: 768px) {
 
-  .heading {
-      font-size: 1.4rem;
-      padding-top: 4rem;
+  .landing-image {
+    height: 400px;
+    max-width: 100%;
+    margin-top: 50px;
   }
 
+  .landing_heading {
+    padding-top: 110px;
+  }
+
+  .heading {
+      font-size: 1.4rem;
+  }
+
+
   .building-image {
-    transform: translate(0% ,10%);
-    height: 300px;
+    margin-top: 20px;
     width: 300px;
   }
 
-  .bg-landingPage_img {
-    height: 270px;
-    padding-top: 30px;
-  }
+.price-card {
+  height: 350px;
+}
 
   .btn-earn {
     display: block;
     margin: 0 auto;
-  }
-
-
-  .bg-landingPage {
-    min-height: 58vh;
   }
 
 .bg-threeWord {
@@ -465,9 +606,27 @@ p.about-text {
     height: 300px;
   }
 
-  .testimonials {
-    min-height: 100vh;
-    padding-top: 0;
-  }
+
+
+  .card-img-top {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.collaborateur-img img {
+  height: 300px; 
+}
+
+
+.product {
+  padding-top: 50px;
+}
+
+.adress {
+  text-align: left;
+  padding-bottom: 20px;
+}
+
 }
 

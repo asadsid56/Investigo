@@ -1,7 +1,12 @@
+
 const mongoose = require("mongoose"); 
 
+
+
+const DB = process.env.DATABASE;
+
 // Connecting a database 
-mongoose.connect("mongodb://localhost:27017/investico", {
+mongoose.connect(DB, {
     useNewUrlParser:true,
     useUnifiedTopology:true
 }).then(() => {

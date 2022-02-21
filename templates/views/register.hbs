@@ -5,76 +5,117 @@
 
 <body>
 
-    {{>navbar}}
+    {{!-- Navbar --}}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="myNavbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src="./img/logo.png" alt="logo" class="logo">Investigo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0"></ul>
+      <form class="d-flex">
+        <a href="/" type="button" class="backToHomePage">Accueil</a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
 
     {{!-- Start of Register Form --}}
 
-<section class="background-img">
+<section class="background-img mt-5">
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-md-6 d-none d-sm-block">
-                <img src="../img/Illustration.png" alt="" class="register-img">
+                <img src="../img/signup.png" alt="" class="register-img">
             </div>
             <div class="col-md-6">
                 <div class="signup-form">
                     <form action="/register" class="mt-5 border p-4 shadow rounded" method="POST">
-                        <h4 class="mb-4">Create Your Account</h4>
+                        <h4 class="mb-4">Créer un compte</h4>
                         <div class="row">
-                            {{!-- First Name --}}
-                            <div class="mb-3 col-md-6 col-sm-12">
-                                <label>First Name<span class="text-danger">*</span></label>
-                                <input type="text" name="firstName" class="form-control" placeholder="Enter First Name">
-                            </div>
+
+                            {{!-- User ID --}}
+                            <input type="text" name="userID" class="d-none">
+
                             {{!-- Last Name --}}
                             <div class="mb-3 col-md-6 col-sm-12">
-                                <label>Last Name<span class="text-danger">*</span></label>
-                                <input type="text" name="lastName" class="form-control" placeholder="Enter Last Name">
+                                <label>Nom<span class="text-danger">*</span></label>
+                                <input type="text" name="lastName" class="form-control" required>
+                            </div>
+                            {{!-- First Name --}}
+                            <div class="mb-3 col-md-6 col-sm-12">
+                                <label>Prénom<span class="text-danger">*</span></label>
+                                <input type="text" name="firstName" class="form-control" required>
                             </div>
                             {{!-- Email --}}
                             <div class="mb-3 col-md-6 col-sm-12">
-                                <label>Email<span class="text-danger">*</span></label>
-                                <input type="email" name="email" class="form-control" placeholder="Enter Email">
+                                <label>Mail<span class="text-danger">*</span></label>
+                                <input type="email" name="email" class="form-control" required>
                             </div>
                             {{!-- Phone Number --}}
                             <div class="mb-3 col-md-6 col-sm-12">
-                                <label>Phone Number<span class="text-danger">*</span></label>
-                                <input type="text" name="phoneNumber" class="form-control" placeholder="Enter Phone Number">
+                                <label>N° de téléphone<span class="text-danger">*</span></label>
+                                <input type="text" name="phoneNumber" class="form-control" required>
                             </div>
 
                             {{!-- Gender --}}
                             <div class="form-group col-md-6 col-sm-12">
-                                <label for="inputState">Gender</label>
-                                <select id="inputState" class="form-control" name="gender">
-                                    <option selected="">Choose your gender</option>
-                                    <option value="Male" name="Male">Male</option>
-                                    <option value="Female" name="Female">Female</option>
-                                    <option value="Other" name="Other">Other</option>
+                                <label for="inputState">Sexe<span class="text-danger">*</span></label>
+                                <select id="inputState" class="form-control" name="gender" required>
+                                    <option selected="">...</option>
+                                    <option value="Homme" name="Homme">Homme</option>
+                                    <option value="Femme" name="Femme">Femme</option>
+                                    <option value="Autre" name="Autre">Autre</option>
                                 </select>
                             </div>
 
                             {{!-- Age --}}
                             <div class="mb-3 col-md-6 col-sm-12">
                                 <label>Age<span class="text-danger">*</span></label>
-                                <input type="text" name="age" class="form-control" placeholder="age">
+                                <input type="text" name="age" class="form-control" required>
                             </div>
+
+                            {{!-- Address --}}
+
+                        <div class="col-12 mb-3">
+                            <label for="inputAddress2" class="form-label">Adresse<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="Address" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="inputCity" class="form-label">Ville<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="City" required>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <label for="inputZip" class="form-label">Code postal<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="CodePostal" required>
+                        </div>
+                      
 
                             {{!-- Password --}}
                             <div class="mb-3 col-md-6 col-sm-12">
-                                <label>Password<span class="text-danger">*</span></label>
-                                <input type="password" name="password" class="form-control" placeholder="Enter Password">
+                                <label>Mot de passe<span class="text-danger">*</span></label>
+                                <input type="password" name="password" class="form-control" required>
                             </div>
 
                             {{!-- Confirm Password --}}
                             <div class="mb-3 col-md-6 col-sm-12">
-                                <label>Confirm Password<span class="text-danger">*</span></label>
-                                <input type="password" name="confirmPassword" class="form-control" placeholder="Confirm Password">
+                                <label>Confirmation mot de passe<span class="text-danger">*</span></label>
+                                <input type="password" name="confirmPassword" class="form-control" required>
                             </div>
 
-                            {{!-- File --}}
+                            {{!-- Check box --}}
                             <div class="my-3 col-md-12">
-                                <label for="exampleFormControlFile1">Upload a file</label>
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="file">
+                                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                  <label class="form-check-label" for="exampleCheck1">En cliquant sur S’inscrire, vous acceptez nos <a href="/condition">Conditions générales</a></label>
                             </div>
+
 
                             {{!-- Submit Form --}}
                             <div class="col-md-12">
@@ -89,6 +130,9 @@
 </section>
 
 {{!-- End of Register Form --}}
+
+
+
 
     {{>footer}}
 </body>

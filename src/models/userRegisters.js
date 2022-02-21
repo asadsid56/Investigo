@@ -1,17 +1,23 @@
+const bcrypt = require("bcryptjs");
 const mongoose = require("mongoose");
 const validator = require("validator");
 
 const userSchema = new mongoose.Schema({
 
-    firstName : {
-        type:String,
-        required:true
+    userID : {
+        type:String
     },
 
     lastName : {
         type:String,
         required:true
     },
+    
+    firstName : {
+        type:String,
+        required:true
+    },
+
 
     email : {
         type:String,
@@ -41,6 +47,21 @@ const userSchema = new mongoose.Schema({
         required:true
     },
 
+    Address : {
+        type:String,
+        required:true
+    },
+
+    City : {
+        type:String,
+        required:true
+    },
+
+    CodePostal : {
+        type:Number,
+        required:true
+    },
+
     password : {
         type:String,
         required:true
@@ -51,20 +72,26 @@ const userSchema = new mongoose.Schema({
         required:true
     },
 
-    file : {
-        type:String,
-        required:true
-    },
-
     active:Boolean, 
     date : {
         type:Date,
         default:Date.now
     },
 
-
-
     
+})
+
+userSchema.pre("save", async function (next) {
+
+    if(this.isModified("password")){
+        
+        console.log(`the current password ${this.password}`);
+        this.password = await bcrypt.hash(this.password, 10);
+        console.log(`the current password ${this.password}`);
+        this.confirmPassword = undefined;
+    }
+
+    next();
 })
 
 // Create a Collection
