@@ -78,7 +78,7 @@ app.post("/register", async (req,res) => {
 
         if( password === confirmPassword) {
             
-            const registration = new Register({
+            const registration = new Register({ 
                 userID : uuid,
                 firstName : req.body.firstName,
                 lastName : req.body.lastName,
