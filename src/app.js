@@ -220,11 +220,11 @@ app.post("/index", async (req,res) => {
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
-httpServer.get('*', function(req, res) {  
-    res.redirect('https://' + req.headers.host + req.url);
+app.all('*', function(req, res) {  
+    res.redirect(300, 'https://' + req.headers.host + req.url);
 
     // Or, if you don't want to automatically detect the domain name from the request header, you can hard code it:
-    // res.redirect('https://example.com' + req.url);
+    // res.redirect('https://investigo.live' + req.url);
 })
 
 httpsServer.listen(PORT, '0.0.0.0', () => {
