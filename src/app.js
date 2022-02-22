@@ -217,20 +217,12 @@ app.post("/index", async (req,res) => {
 
 
 // Starting both http & https servers
-const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
-app.all('*', function(req, res) {  
-    res.redirect(300, 'https://' + req.headers.host + req.url);
 
-    // Or, if you don't want to automatically detect the domain name from the request header, you can hard code it:
-    // res.redirect('https://investigo.live' + req.url);
-})
 
 httpsServer.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running at ${PORT}`);
 });
 
-httpServer.listen(80, '0.0.0.0', () => {
-	console.log('HTTP Server running on port 80');
-});
+
