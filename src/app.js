@@ -57,19 +57,18 @@ app.get("*", (req,res) => {
 
 app.post("/register", async (req,res) => {
 
-    let uuid;
-
+    
     const create_UUID = () => {
         let dt = new Date().getTime();
-        uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
             let r = (dt + Math.random()*16)%16 | 0;
             dt = Math.floor(dt/16);
             return (c=='x' ? r :(r&0x3|0x8)).toString(16);
         });
-        // return uuid; 
+        return uuid; 
     }
     
-    console.log(create_UUID());
+    let uuid = create_UUID();
 
 
    try {
@@ -159,7 +158,7 @@ app.post("/register", async (req,res) => {
         //   console.log("Message sent: %s", info.messageId);
         //   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
         
-          res.render("Email has been sent");
+         console.log("Email has been sent");
 
         } else {
             res.send("Invalid credientials")
