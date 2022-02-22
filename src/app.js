@@ -217,9 +217,8 @@ app.post("/index", async (req,res) => {
 
 
 // Starting both http & https servers
-const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
-httpServer.listen(PORT, () => {
+httpsServer.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running at ${PORT}`);
 });
