@@ -6,10 +6,25 @@ const hbs = require('hbs');
 const Register = require("./models/userRegisters");
 const message = require("./models/message");
 const nodemailer = require("nodemailer"); 
+const fs = require('fs');
+const http = require('http');
+const https = require('https');
 
 dotenv.config({ path: "./config.env"});
 require("./db/conn");
 const PORT = process.env.PORT;
+
+// Certificate
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/investigo.live/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/investigo.live/cert.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/investigo.live/chain.pem', 'utf8');
+
+const credentials = {
+	key: privateKey,
+	cert: certificate,
+	ca: ca
+};
+
 
 // Home Page
 
@@ -199,8 +214,12 @@ app.post("/index", async (req,res) => {
 
    
 
-// Create Server
 
-app.listen(PORT, () => {
+
+// Starting both http & https servers
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(credentials, app);
+
+httpServer.listen(PORT, () => {
     console.log(`Server is running at ${PORT}`);
 });
