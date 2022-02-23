@@ -625,6 +625,10 @@ a {
   padding-top: 50px;
 }
 
+.collaborateur {
+  background-image: none;
+}
+
 .collab {
   border-radius: 0px;
   background: #ffffff;
