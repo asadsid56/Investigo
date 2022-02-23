@@ -454,7 +454,11 @@ a {
 .collab {
   border-radius: 30px;
   background: #ffffff;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 }
+
+
+
 
 
 
@@ -625,6 +629,7 @@ a {
   border-radius: 0px;
   background: #ffffff;
   padding: 30px 20px;
+  box-shadow: none;
 }
 
 .adress {
