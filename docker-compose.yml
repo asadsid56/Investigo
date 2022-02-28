@@ -1,0 +1,27 @@
+version: "3.3"
+
+services:
+  #mongoDB services
+  mongo_db:
+    container_name: db_container
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongo_db:/data/db
+
+  #nodejs services
+  investigo_webserver:
+    build: .
+    ports:
+      - 443:5000
+    environment:
+      PORT: 5000
+      DATABASE: mongodb://mongo_db:27017/
+      DB_NAME: investico
+    depends_on:
+      - mongo_db
+    volumes:
+      - ./certs/investigo.live:/certs
+
+volumes:
+  mongo_db: {}

@@ -14,18 +14,6 @@ dotenv.config({ path: "./config.env"});
 require("./db/conn");
 const PORT = process.env.PORT;
 
-// Certificate
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/investigo.live/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/investigo.live/cert.pem', 'utf8');
-const ca = fs.readFileSync('/etc/letsencrypt/live/investigo.live/chain.pem', 'utf8');
-
-const credentials = {
-	key: privateKey,
-	cert: certificate,
-	ca: ca
-};
-
-
 // Home Page
 
 const static_path = path.join(__dirname, '../public');
@@ -217,11 +205,11 @@ app.post("/index", async (req,res) => {
 
 
 // Starting both http & https servers
-const httpsServer = https.createServer(credentials, app);
+const httpServer = http.createServer(app);
 
 
 
-httpsServer.listen(PORT, '0.0.0.0', () => {
+httpServer.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running at ${PORT}`);
 });
 
