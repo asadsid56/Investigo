@@ -12,8 +12,6 @@ services:
   #nodejs services
   investigo_webserver:
     build: .
-    ports:
-      - 443:5000
     environment:
       PORT: 5000
       DATABASE: mongodb://mongo_db:27017/
