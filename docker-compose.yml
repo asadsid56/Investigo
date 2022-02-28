@@ -6,6 +6,10 @@ services:
     container_name: db_container
     image: mongo:latest
     restart: always
+    networks:
+      - nginx_default
+    ports:
+      - 27019:27017
     volumes:
       - mongo_db:/data/db
 
@@ -18,6 +22,12 @@ services:
       DB_NAME: investico
     depends_on:
       - mongo_db
+    networks:
+      - nginx_default
 
 volumes:
   mongo_db: {}
+
+networks:
+  nginx_default:
+    external: true
