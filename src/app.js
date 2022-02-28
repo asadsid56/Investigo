@@ -6,9 +6,7 @@ const hbs = require('hbs');
 const Register = require("./models/userRegisters");
 const message = require("./models/message");
 const nodemailer = require("nodemailer"); 
-const fs = require('fs');
 const http = require('http');
-const https = require('https');
 
 dotenv.config({ path: "./config.env"});
 require("./db/conn");

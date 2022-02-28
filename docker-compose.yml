@@ -18,8 +18,6 @@ services:
       DB_NAME: investico
     depends_on:
       - mongo_db
-    volumes:
-      - ./certs/investigo.live:/certs
 
 volumes:
   mongo_db: {}
