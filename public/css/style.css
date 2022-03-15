@@ -428,12 +428,13 @@ a {
 } 
 
 .card {
-  border-radius: 2rem;
-}
-.card:hover{
+  height: 24rem;
+  border-radius: 1.25rem;
+  border: none;
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
   transition: all .5s;
 }
+
 
 
 /* Modal */
@@ -533,6 +534,11 @@ a {
   border-radius: 50%;
 }
 
+/* .youtube {
+  background: linear-gradient(23.18deg, #D44C0E 6.09%, #FD0B36 73.44%);
+  border-radius: 50%;
+} */
+
 
 
 /* Emploi  */
@@ -552,6 +558,19 @@ a {
   font-size: 0.9rem;
   list-style: disc;
 }
+
+/* Sitemap */
+
+.sitemap {
+  min-height: 75vh;
+  text-align: center;
+}
+
+.sitemap_link {
+  padding-top: 1.25rem;
+}
+
+
 
 
 

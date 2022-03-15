@@ -1,80 +1,86 @@
 
-<section class="bg-projects pt-5" id="Projects" data-aos="fade-up">
-  <h2 class="text-center pb-5" id="Explore"><b>Nos Projets</b></h2>
+<section class="bg-projects" id="Projects" data-aos="fade-up">
+  <h2 class="text-center py-5" id="Explore"><b>Nos Projets</b></h2>
   <div class="container">
     <ul>
       <li class="liste active" data-filter="all">Tout</li>  
       <li class="liste" data-filter="agriculture">Agriculture</li>  
       <li class="liste" data-filter="transport">Transport</li>  
       <li class="liste" data-filter="immobilier">Immobilier</li>  
-      <li class="liste" data-filter="exploitation">Exploitation</li>  
+      <li class="liste" data-filter="exploitation">Minerie</li>  
       <li class="liste" data-filter="telecommunication">Télécommunication</li>  
       <li class="liste" data-filter="hotelier">Hôtelier</li>  
     </ul>
 
 <div class="product">
-  <div class="itemBox hotelier">
-      <div class="card mb-3">
-        <img src="../img/hotel.png" class="img-fluid" alt="hotel">
+   <div class="itemBox transport pt-3">
+     <div class="card mb-3" style="background: linear-gradient(180deg, #32C5FF 0%, #4232FF 100%);">
+        <img src="../img/Frame1.png" class="img-fluid" alt="transport">
         <div class="card-body">
-          <p class="card-text">L’investissement dans <br> l'hôtellerie</p>
+          <p class="text-white">L’investissement dans le transport</p>
+          <!-- Button trigger modal 2 -->
+          <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#myModal_2">Lire plus</button>
+        </div>
+      </div>
+   </div>
+
+  <div class="itemBox agriculture pt-3">
+        <div class="card mb-3" style="background: linear-gradient(180deg, #FFF264 0%, #FFB334 100%);">
+          <img src="../img/Frame4.png" class="img-fluid" alt="agriculture">
+          <div class="card-body">
+            {{!-- <h5 class="card-title">L’investissement agriculture</h5> --}}
+            <p class="text-white">L’investissement dans l'agriculture</p>
+            <!-- Button trigger modal 1 -->
+            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#myModal_1">Lire Plus</button>
+          </div>
+        </div>
+  </div>
+
+  <div class="itemBox immobilier pt-3">
+      <div class="card mb-3" style="background: radial-gradient(86.6% 86.6% at 43.86% 0%, #FF5555 0%, #D800B9 100%) ">
+        <img src="../img/Frame5.png" class="img-fluid" alt="immobilier">
+        <div class="card-body">
+          <p class="text-white">L’investissement dans l'immobilier</p>
+          <!-- Button trigger modal 3 -->
+          <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#myModal_3">Lire plus</button>
+        </div>
+      </div>
+  </div>
+
+   <div class="itemBox telecommunication pt-3">
+      <div class="card mb-3" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(143.8deg, #A760FF 5.59%, #3430FF 77.97%);">
+        <img src="../img/Frame6.png" class="img-fluid" alt="network">
+        <div class="card-body">
+          <p class="text-white">L’investissement dans la télécommunication</p>
+          <!-- Button trigger modal 5 -->
+          <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#myModal_5">Lire plus</button>
+        </div>
+      </div>
+   </div>
+
+  <div class="itemBox hotelier pt-3">
+      <div class="card mb-3" style="background: linear-gradient(220.53deg, #B2F763 0%, #26AB3F 76.95%);">
+        <img src="../img/Frame3.png" class="img-fluid" alt="hotel">
+        <div class="card-body">
+          <p class="text-white">L’investissement dans <br> l'hôtellerie</p>
           <!-- Button trigger modal 1 -->
-          <button type="button" class="btn-projects" data-bs-toggle="modal" data-bs-target="#myModal_6">lire plus</button>
+          <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#myModal_6">Lire plus</button>
         </div>
       </div>
    </div>
    
-   <div class="itemBox transport">
-     <div class="card mb-3">
-        <img src="../img/transport.png" class="img-fluid" alt="transport">
+   <div class="itemBox exploitation pt-3">
+      <div class="card mb-3" style="background: linear-gradient(356.05deg, rgba(196, 196, 196, 0) -38.04%, #C4C4C4 40.21%);">
+        <img src="../img/Frame2.png" class="img-fluid" alt="exploitation">
         <div class="card-body">
-          <p class="card-text">L’investissement dans le transport</p>
-          <!-- Button trigger modal 2 -->
-          <button type="button" class="btn-projects" data-bs-toggle="modal" data-bs-target="#myModal_2">lire plus</button>
-        </div>
-      </div>
-   </div>
-   <div class="itemBox immobilier">
-      <div class="card mb-3">
-        <img src="../img/immobilier.png" class="img-fluid" alt="immobilier">
-        <div class="card-body">
-          <p class="card-text">L’investissement dans l'immobilier</p>
-          <!-- Button trigger modal 3 -->
-          <button type="button" class="btn-projects" data-bs-toggle="modal" data-bs-target="#myModal_3">Lire plus</button>
-        </div>
-      </div>
-   </div>
-   <div class="itemBox exploitation">
-      <div class="card mb-3">
-        <img src="../img/extraction.png" class="img-fluid" alt="exploitation">
-        <div class="card-body">
-          <p class="card-text">L’investissement dans l'exploitation</p>
+          <p class="text-white">L’investissement dans l'exploitation minière</p>
           <!-- Button trigger modal 4 -->
-          <button type="button" class="btn-projects" data-bs-toggle="modal" data-bs-target="#myModal_4">Lire plus</button>
+          <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#myModal_4">Lire plus</button>
         </div>
       </div>
    </div>
-   <div class="itemBox agriculture">
-      <div class="card mb-3">
-        <img src="../img/agriculture.png" class="img-fluid" alt="agriculture">
-        <div class="card-body">
-          {{!-- <h5 class="card-title">L’investissement agriculture</h5> --}}
-          <p class="card-text">L’investissement dans l'agriculture</p>
-          <!-- Button trigger modal 1 -->
-          <button type="button" class="btn-projects" data-bs-toggle="modal" data-bs-target="#myModal_1">Lire Plus</button>
-        </div>
-      </div>
-     </div>
-   <div class="itemBox telecommunication">
-      <div class="card mb-3">
-        <img src="../img/network.png" class="img-fluid" alt="network">
-        <div class="card-body">
-          <p class="card-text">L’investissement dans la télécommunication</p>
-          <!-- Button trigger modal 5 -->
-          <button type="button" class="btn-projects" data-bs-toggle="modal" data-bs-target="#myModal_5">lire plus</button>
-        </div>
-      </div>
-   </div>
+ 
+  
    
 </div>
 
@@ -92,7 +98,7 @@
       <div class="modal-body">
         <img src="../img/agriculture.png" class="img-fluid" alt="agriculture">
         <h2 class="mt-5"><strong>L’Investissement dans l'agriculture</strong><hr></h2>
-        <p class="mb-3">L’agroalimentaire est un investissement sûr qui a fait ses preuves grâce à une main d’œuvre vigoureuse, des terres fertiles et cultivables. Le continent africain est l’un des plus importants exportateurs de produits alimentaires mondiaux. Les terres s’étendent sur des milliers de kilomètres, correspondant à des opportunités de développements effectives. Le climat tropical favorise le développement de toutes les plantes, y compris les forêts. Les investissements dans l’agriculture africaine augmentent de jour en jour, ainsi InvestiGo est au premier plan pour permettre à ses investisseurs d’en profiter.</p>
+        <p class="mb-3">L’agroalimentaire est un investissement sûr qui a fait ses preuves grâce à une main d’œuvre vigoureuse, des terres fertiles et cultivables. Le continent africain est l’un des plus importants exportateurs de produits alimentaires mondiaux. Les terres s’étendent sur des milliers de kilomètres, correspondant à des opportunités de développements effectives. Le climat tropical favorise le développement de toutes les plantes, y compris les forêts. Les investissements dans l’agriculture africaine augmentent de jour en jour, ainsi Investigo est au premier plan pour permettre à ses investisseurs d’en profiter.</p>
         
       </div>
       <div class="modal-footer">
@@ -115,7 +121,7 @@
       <div class="modal-body">
         <img src="../img/transport.png" class="img-fluid" alt="L’investissement transport">
         <h2 class="mt-5"><strong>L'investissement dans le transport</strong><hr></h2>
-       <p class="mb-3">L’Afrique est le terrain favorable aux investissements, avec ses ressources naturelles abondantes et une main-d’œuvre jeune et qualifiée. Les chiffres relevés ces dernières années, notamment par la Banque Mondiale témoignent de la performance économique africaine. L’import-export constitue un domaine opulent. Le transport implique au premier abord de trouver un partenaire avec lequel organiser le transport des marchandises. Heureusement, le secteur est aujourd’hui plus ou moins libéralisé, c’est-à-dire qu’il y a moins de contraintes que dans le passé. Et le secteur a vu l’arrivée de plusieurs acteurs œuvrant dans le transport maritime ou aérien. InvestiGo privilégie l’acheminement de marchandises par le transport maritime pour le grand volume de marchandises transportables vers le monde entier.</p>
+       <p class="mb-3">L’Afrique est le terrain favorable aux investissements, avec ses ressources naturelles abondantes et une main-d’œuvre jeune et qualifiée. Les chiffres relevés ces dernières années, notamment par la Banque Mondiale témoignent de la performance économique africaine. L’import-export constitue un domaine opulent. Le transport implique au premier abord de trouver un partenaire avec lequel organiser le transport des marchandises. Heureusement, le secteur est aujourd’hui plus ou moins libéralisé, c’est-à-dire qu’il y a moins de contraintes que dans le passé. Et le secteur a vu l’arrivée de plusieurs acteurs œuvrant dans le transport maritime ou aérien. Investigo privilégie l’acheminement de marchandises par le transport maritime pour le grand volume de marchandises transportables vers le monde entier.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn-red" data-bs-dismiss="modal">Fermé</button>
@@ -147,7 +153,7 @@
 
         <p class="mb-3">Investir dans l’immobilier est perçu comme un acte réservé intégralement aux plus fortunés. Peut-on vraiment investir dans ce domaine sans fonds?</p>
 
-        <p class="mb-3">InvestiGo apporte la solution, en offrant à ses investisseurs la possibilité de placer leur argent dans l’immobilier en Afrique afin de répondre à la demande croissante et bénéficier des fruits de ces investissements.</p>
+        <p class="mb-3">Investigo apporte la solution, en offrant à ses investisseurs la possibilité de placer leur argent dans l’immobilier en Afrique afin de répondre à la demande croissante et bénéficier des fruits de ces investissements.</p>
 
         <span class="mb-3">
           Tout comme :
@@ -157,7 +163,7 @@
           <li>investir peu et de gagner plus</li>
           <li>être capable d’investir sans avoir une fortune</li>
           <li>transformer ses revenus actifs en revenus passifs sur le long terme </li>
-          <li>gagner en expérience et suivre des formations payées par InvestiGo</li>
+          <li>gagner en expérience et suivre des formations payées par Investigo</li>
           <li>avoir la liberté financière</li>
         </ul>
 
@@ -182,7 +188,7 @@
       <div class="modal-body">
         <img src="../img/extraction.png" class="img-fluid" alt="exploitation">
         <h2 class="mt-5"><strong>L'investissement dans l'exploitation minière</strong><hr></h2>
-        <p class="mb-3">La demande mondiale croissante fait de l’exploitation minière un investissement lucratif. L’Afrique a beaucoup de ressources minérales inexploitées, telles que le diamant, le platine, le chrome, le coltan, l’or, la bauxite, le cobalt, le fer et bien d’autres. Plusieurs de ces ressources minérales sont commercialisées à l’échelle mondiale. Grâce à InvestiGo vous avez la possibilité de réaliser un profit considérable. En effet, InvestiGo vous offre l’opportunité d’investir dans l’exploitation minière, dans les régions d’Afrique dotées des plus vastes ressources naturelles, comme le Congo et la Tanzanie.</p>
+        <p class="mb-3">La demande mondiale croissante fait de l’exploitation minière un investissement lucratif. L’Afrique a beaucoup de ressources minérales inexploitées, telles que le diamant, le platine, le chrome, le coltan, l’or, la bauxite, le cobalt, le fer et bien d’autres. Plusieurs de ces ressources minérales sont commercialisées à l’échelle mondiale. Grâce à Investigo vous avez la possibilité de réaliser un profit considérable. En effet, Investigo vous offre l’opportunité d’investir dans l’exploitation minière, dans les régions d’Afrique dotées des plus vastes ressources naturelles, comme le Congo et la Tanzanie.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn-red" data-bs-dismiss="modal">Fermé</button>
@@ -210,7 +216,7 @@
         </p>
         <p class="mb-3">Pour vous donner quelques chiffres, nous dirons que l’Afrique du Sud est le premier pays d’Afrique avec le plus d’investissements dans les télécommunications. Il a investi plus de 18 milliards de dollars ces trois dernières années, dans les télécommunications. En raison de ces énormes investissements, le secteur des télécommunications de l’Afrique du Sud est aussi performant que les leaders du marché mondial.</p>
 
-        <p class="mb-3">InvestiGo privilégie principalement des pays dont la télécommunication est établie : le Nigéria et l’Afrique du Sud. Outre la qualité de leur réseau, à eux seuls, ils totalisent une population de 265 millions.</p>
+        <p class="mb-3">Investigo privilégie principalement des pays dont la télécommunication est établie : le Nigéria et l’Afrique du Sud. Outre la qualité de leur réseau, à eux seuls, ils totalisent une population de 265 millions.</p>
       </div>
 
       <div class="modal-footer">
@@ -234,7 +240,7 @@
         <h2 class="mt-5"><strong>L’investissement dans 
           l'hôtellerie</strong><hr></h2>
        
-        <p class="mb-3">L’investissement dans l’hôtellerie est un placement qui attire de plus en plus les particuliers en raison de sa fiabilité et du taux de rendement qu’il procure. L’hôtellerie est un secteur dynamique qui dispose de nombreux atouts. Un investisseur en quête d’une rentabilité plus élevée peut envisager l’investissement hôtelier en alternative à l’investissement locatif. Si l’investissement hôtelier a longtemps été réservé aux institutions ou aux investisseurs fortunés, c’est aujourd’hui un investissement accessible aux particuliers. C’est pour cela qu’InvestiGo vous propose une solution à la clé. L’investissement hôtelier devient plus attractif aujourd’hui avec des tickets d’entrée plus abordables. C’est pourquoi InvestiGo vient avec une solution à la clé pour les particuliers par la souscription de produits hôteliers avec des fonds ou des véhicules dédiés. InvestiGo travaille sur de nombreux projets à travers l’Afrique. </p>
+        <p class="mb-3">L’investissement dans l’hôtellerie est un placement qui attire de plus en plus les particuliers en raison de sa fiabilité et du taux de rendement qu’il procure. L’hôtellerie est un secteur dynamique qui dispose de nombreux atouts. Un investisseur en quête d’une rentabilité plus élevée peut envisager l’investissement hôtelier en alternative à l’investissement locatif. Si l’investissement hôtelier a longtemps été réservé aux institutions ou aux investisseurs fortunés, c’est aujourd’hui un investissement accessible aux particuliers. C’est pour cela qu’Investigo vous propose une solution à la clé. L’investissement hôtelier devient plus attractif aujourd’hui avec des tickets d’entrée plus abordables. C’est pourquoi Investigo vient avec une solution à la clé pour les particuliers par la souscription de produits hôteliers avec des fonds ou des véhicules dédiés. Investigo travaille sur de nombreux projets à travers l’Afrique. </p>
 
       </div>
       <div class="modal-footer">
