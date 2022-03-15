@@ -40,6 +40,10 @@ app.get("/register", (req,res) => {
     res.render("register");
 })
 
+app.get("/sitemap", (req,res) => {
+    res.render("sitemap");
+})
+
 app.get("/emploi", (req,res) => {
     res.render("emploi");
 })
